@@ -1,7 +1,7 @@
 package main
 
-import "av153k.github.io/learn-go/app"
+import "av153k.github.io/learn-go/hello"
 
 func main() {
-	app.PrintHelloWorld()
+	hello.PrintHelloWorld()
 }
