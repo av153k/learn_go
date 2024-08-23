@@ -1,7 +1,20 @@
 package main
 
-import "av153k.github.io/learn-go/hello"
+import (
+	"os"
+	"time"
+
+	"av153k.github.io/learn-go/mocking"
+)
+
+type DefaultSleeper struct {
+}
+
+func (d *DefaultSleeper) Sleep() {
+	time.Sleep(1 * time.Second)
+}
 
 func main() {
-	hello.PrintHelloWorld()
+	sleeper := &DefaultSleeper{}
+	mocking.Countdown(os.Stdout, sleeper)
 }
